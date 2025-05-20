@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../day4/css/style_wiki.css">
+  <title>wikipedia
+  </title>
+  <script>
+    function hide() {
+  var x = document.getElementById("content");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav_bar">
+        <div class="Menu">Menu</div>
+        <div class="logo">
+          <div class="wiki"><img src="../day4/image/wikipedia.png" alt=""></div>
+          <div class="slogan"><img src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg" alt=""> <br>
+          <img src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg" alt=""></div>
+        </div>
+        <div class="search_bar"><input type="search" placeholder="search"> <button>Search</button></div>
+        <div class="log_in_info">
+          <div class="log_in"><a href="#">log in</a></div>
+          <div class="sign_in"><a href="#"> Create account</a></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <aside>
+    <button onclick="hide()">Hide</button><div id="content">
+    <h2>Content</h2><hr>
+    <h2>(Top)</h2>
+    <ul class="aside">
+      <li><a href="#">Etymology</a> </li>
+      <li><a href="#">history</a></li> 
+      <li><a href="#">geographic</a></li>
+    </ul>
+  </div></aside>
+  <main>
+    <div class="nepal">
+      <div class="nepal_heading">
+        Nepal
+      </div>
+      <div class="nepal_details">
+        
+    </div>
+  </div>
+  </main>
+</body>
+</html>

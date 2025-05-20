@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascripting is a scripting language.</h1>
+    <h2>
+      API => json format data <br />
+      1.fast render <br />2. Testing in console(Info). <br />3. Network
+    </h2>
+
+    <h1>
+      Variables
+      <br />
+      <h2>1.Place where data is stored.</h2>
+    </h1>
+
+    <h1>
+      Data types
+      <br />
+      <h2>
+        Numbers (let a=40;) <br />
+        Strings (let name = "Ram" or 'Shayam' ) <br />
+        Array => [1,2,3,4,5], number, string, objests (Set of similar data
+        stored in a same variables) <br />
+        Booleans => true ,false<br />
+        Undefined <br />
+        Object => { name :"Ram", <br />
+        role:" Software developer" , <br />
+        phone:"123456789 " } <br />
+      </h2>
+
+      <h1>Main Note Id=> index</h1>
+    </h1>
+    <script>
+      // var a =10;
+
+      // let name= "ram"
+      // //  name = shyam;
+      // console.log(a)
+      // document.write(a);
+
+      let a = 30;
+      // a =40;
+      // console.log(a)
+      // document.write(a);
+      let name = "Ram";
+      console.log(name, typeof name);
+
+      let ram = {
+        name: "Ram",
+        role: "Software developer",
+        phone: 123456789,
+      };
+
+      console.log(ram, typeof ram);
+      document.write(ram);
+
+      let arr = [1, 2, 3, 4, , 5];
+      console.log(arr, typeof arr);
+
+      // Example of real time data
+
+      let coffee = [
+        {
+          name: " Latte",
+          price: "RS 200",
+          rating: "4.7",
+        },
+        {
+          name: " Espresso",
+          price: "RS 150",
+          rating: "4.5",
+        },
+        {
+          name: " Americano",
+          price: "RS 100",
+          rating: "4.2",
+        },
+      ];
+      console.log(coffee[0].name)
+
+      
+      document.write(coffee);
+    </script>
+    For accessing the data of coffee 
+
+    {coffee?.map((data)=>{
+      return (
+        <div class="coffee">
+          <h1>{data.name}</h1>
+          <h2>{data.price}</h2>
+          <h3>{data.rating}</h3>
+        </div>
+      );
+    })}
+    </div>
+  </body>
+</html>

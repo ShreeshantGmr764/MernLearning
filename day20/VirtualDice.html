@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Virtual Dice</title>
+</head>
+<body>
+    <img src="./dice.jpg" alt="Dice" id="dice" onclick="rolldice()" style="width: 100px; height: 100px; cursor:pointer " />
+    <p>Click On the dice to roll the dice.</p>
+
+    <script>
+        function rolldice(){
+            let a = Math.floor(Math.random()*6)+1;
+            console.log(a)
+            document.write(`You got a ${a}` )
+        }
+        
+    </script>
+
+</body>
+</html>

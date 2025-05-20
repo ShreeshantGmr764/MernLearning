@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        loop
+    </title>
+</head>
+<body>
+    <h2>
+        loops  types
+    </h2>
+
+    <ol>
+        <li>    
+            For loop <br />
+            for (initial expression, condition, increment/ decrement ){ <br>
+                code to be executed <br>
+            } <br>
+
+           <b>Example</b>: <br>
+            for (let i = 0; i < 5; i++) { <br>
+                console.log(i); <br>
+            } <br>
+        </li>
+        <li>
+            While loop  
+              
+            while (condition) { <br>
+                code to be executed 
+                increment/ decrement<br>
+            } <br>
+        </li>
+        <li>
+            Do while loop
+            do { <br>
+                code to be executed <br>
+            } while (condition); <br>
+
+        </li>
+    </ol>
+
+    <script>
+        for ( let i=1; i<=20; i++){
+            // i=i+1;
+            console.log(i);
+            if (i % 2 != 0)
+        {
+            document.write(i, "<br/>")
+        }
+            
+        }
+
+        const student =[
+            {
+                name : "Ram",   
+                roll : 1,
+                class : "BCA",
+                age : 20,
+            }
+
+            ,
+            {
+                name : "Shyam",   
+                roll : 2,
+                class : "BCA",
+                age : 21,
+            },
+            {
+                name : "Mohan",   
+                roll : 3,
+                class : "BCA",
+                age : 22,
+            },
+
+        ]
+        console.log(student)
+
+        for ( let i =0; i<student.length; i++){
+            console.log(student[i].name, " <br/>")
+            // document.write(student[i].name, "<br/>")
+
+            document.write(student[i].name, "<br/>")
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day ^</title>
+  <style>
+    .box{
+      border: 2px solid black;
+      width: 400px ;      
+      background-color: blueviolet;
+      height: 300px;
+      /* overflow: auto; */
+      /* Hidden hides the scrollbar */
+      /* scroll it provides scroll bar in both axis  */
+      overflow-y: scroll;
+      overflow-x: auto;
+    }
+    .rem,.em{
+      font-size:2rem;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    } 
+    .em p{
+      font-size: 2em;
+    }
+    .parent{
+      width:75vw;
+      background-color: blue;
+      border: 2px solid black;
+    }
+   .parent p{
+    width: 35vw;
+    height: 20vh;
+    font-size: 2em;
+    background-color: red; 
+    overflow: auto;
+  }
+  </style>
+</head>
+<body>
+  <h2>Css units </h2>
+  <ol>
+    <li>Pixel(Px)=  fixed:(not used for responsive design)</li>
+    <li>Rem =relative to the  root element(html),16px,1rem=16px </li>
+    <li>em:relative to parent element</li>
+    <li>% relative</li>
+    <li>vh:relative to the viewport ko height</li>
+    <li>vw:relative to the  view port  ko width</li>
+  </ol>
+  <h1>Uses</h1>
+  <div class="box" ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, omnis soluta ipsum error nisi voluptatum perferendis? Cum maiores voluptate nesciunt ullam odio minima aperiam, laborum neque nam ducimus inventore harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, ad, tempore impedit optio beatae, quasi provident nobis possimus sed voluptatem quibusdam. Sapiente eveniet architecto nihil distinctio voluptatum nulla eum et quibusdam quisquam. Quas facere nesciunt blanditiis tempora minima atque repellendus sed numquam accusamus minus itaque autem repellat sequi molestias vero sapiente est non, officia ab. Aspernatur ab verosunt aliquam vel accusamus reiciendis deserunt eos, deleniti totam ipsam nihil cumque ex facilis illum dignissimos consequatur omnis quo esse maxime ad iure molestiae itaque ipsum. Adipisci explicabo voluptatum quis, quaerat aperiam sed maxime repellendus quam vero hic optio iusto dignissimos minus. Lorem    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam libero rerum, ipsa commodi quos quaerat! Dolores atque dolore laudantium officia! Suscipit voluptate cum atque vitae consectetur fuga officia quo quos. </p></div>
+<h2>Rem</h2>
+<div class="rem">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet voluptatibus maiores laudantium cumque, a nostrum, aut eius quia, veritatis obcaecati voluptates? Architecto placeat perspiciatis nulla temporibus fugit eligendi, laudantium, ratione mollitia magnam exercitationem consectetur provident natus sed pariatur quas itaque voluptas porro ducimus quaerat voluptatum, voluptates in recusandae? Labore animi eum repellat blanditiis dolorum, maxime repellendus alias ipsa accusantium veritatis aliquam soluta magni reprehenderit quam eius consectetur? Culpa obcaecati molestiae illo assumenda tempore rem delectus impedit natus nam voluptates voluptatum, quam dignissimos provident, temporibus ducimus? Animi consequuntur, laboriosam sed aperiam libero iste in qui hic architecto sunt aut doloremque dolorum!</p>
+</div>
+<h1>For Em</h1>
+<div class="em">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni doloremque cumque culpa non, placeat deserunt nobis necessitatibus porro perspiciatis minima quod sint ullam, aspernatur illum reprehenderit minus, magnam voluptatum totam?</p>
+</div>
+<div class="parent">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rem ducimus exercitationem? Laborum eius, hic inventore dolore quas veniam vel impedit excepturi et soluta blanditiis modi, alias aliquid eveniet facere corporis minima magnam. Quasi accusamus provident reprehenderit molestias asperiores animi temporibus aut at iste neque, inventore aliquam sint repudiandae quisquam!</p>
+</div>
+</body>
+</html>

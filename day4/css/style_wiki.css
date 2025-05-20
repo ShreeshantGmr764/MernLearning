@@ -1,0 +1,58 @@
+.nav_bar{
+  display: flex;  
+  align-items: center;
+  border-radius: 30px;
+  justify-content: space-between;
+  max-width:1349px;
+  max-height:66px;
+  background: color #202122;;
+}
+.Menu{
+  height: 32px;
+  width:32px;
+}
+.logo{
+  display: flex; 
+  width:255px; 
+  cursor: pointer;
+
+}
+.wiki img{
+  height: 50px;
+  width: 50px;
+}
+.slogan img{
+   height:25px;
+}
+.search_bar{
+  display: flex;
+  align-items: center;
+  
+}
+.search_bar input{
+  height:32px; 
+  cursor: pointer;
+
+}
+.search_bar button{
+  height:32px;
+}
+.log_in_info{
+  display: flex;
+  justify-content: space-between;
+  min-width:184px;
+  align-items: center;
+}
+.log_in_info a{
+  text-decoration: none; 
+  
+}
+#content{
+  height: 400px;
+  width: 243px;
+  display: flex;
+  flex-direction: column;
+}
+.aside a{ 
+  text-decoration: none;
+}

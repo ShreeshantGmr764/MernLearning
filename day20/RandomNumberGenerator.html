@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <div class="Generator">
+        <div id="display"></div>
+        <div id="generateNumber">
+            Enter Number: 
+            <input type="number" placeholder="Enter the guessed number here" id="enterednumber" onchange="abc()" />
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        // Generate random number globally so it doesn't change every time input changes
+        const a = Math.floor(Math.random() * 100) + 1;
+        console.log("Generated Number:", a);
+
+        function abc() {
+            const enterednumber = parseInt(document.getElementById("enterednumber").value);
+            const result = document.getElementById("result");
+
+            if (isNaN(enterednumber)) {
+                result.textContent = "Please enter a valid number.";
+            } else if (enterednumber < a) {
+                result.textContent = "Too low!!!";
+                result.style.color = "red";
+            } else if (enterednumber > a) {
+                result.textContent = "Too high!!!";
+                result.style.color = "red";
+            } else {
+                result.textContent = `You guessed it right the number was+"${a}" `
+                result.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

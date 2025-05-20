@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        Calculator
+    </title>
+    <style>
+        .display {
+            border: 2px solid Black;
+            width: 500px;
+            height: 320px;
+            display: grid;
+            grid-template-columns: repeat(4, 5fr);
+        }
+
+        .displayElement {
+            border: 1px solid Black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: lightgray;
+            transition: background-color 0.3s;
+        }
+        .output {
+    grid-column: span 4;
+    background-color: white;
+    font-size: 36px;
+    text-align: right;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="display">
+    <div class="output" id="output">0</div>
+
+    <div class="displayElement" onclick="calculation(this)">/</div>
+    <div class="displayElement" onclick="calculation(this)">%</div>
+    <div class="displayElement" onclick="calculation(this)">+</div>
+    <div class="displayElement" onclick="calculation(this)">-</div>
+
+    <div class="displayElement" onclick="calculation(this)">1</div>
+    <div class="displayElement" onclick="calculation(this)">2</div>
+    <div class="displayElement" onclick="calculation(this)">3</div>
+    <div class="displayElement" onclick="calculation(this)">c</div>
+
+    <div class="displayElement" onclick="calculation(this)">4</div>
+    <div class="displayElement" onclick="calculation(this)">5</div>
+    <div class="displayElement" onclick="calculation(this)">6</div>
+    <div class="displayElement" onclick="calculation(this)">CE</div>
+
+    <div class="displayElement" onclick="calculation(this)">7</div>
+    <div class="displayElement" onclick="calculation(this)">8</div>
+    <div class="displayElement" onclick="calculation(this)">9</div>
+    <div class="displayElement" onclick="calculation(this)">*</div>
+
+    <div class="displayElement" onclick="calculation(this)">.</div>
+    <div class="displayElement" onclick="calculation(this)">0</div>
+    <div class="displayElement" onclick="calculation(this)">=</div>
+</div>
+<script>
+    let output = document.getElementById("output");
+    let currentInput = "";
+    let operator = "";
+    let firstOperand = null;
+
+    function calculation(element) {
+        const value = element.innerText;
+
+        if (value === "c") {
+            currentInput = "";
+            output.innerText = "0";
+        } else if (value === "CE") {
+            currentInput = currentInput.slice(0, -1);
+            output.innerText = currentInput || "0";
+        } else if (value === "=") {
+            if (firstOperand !== null && operator) {
+                const secondOperand = parseFloat(currentInput);
+                const result = calculate(firstOperand, secondOperand, operator);
+                output.innerText = result;
+                currentInput = "";
+                firstOperand = null;
+                operator = "";
+            }
+        } else if (["+", "-", "*", "/"].includes(value)) {
+            if (currentInput) {
+                firstOperand = parseFloat(currentInput);
+                operator = value;
+                currentInput = "";
+            }
+        } else {
+            currentInput += value;
+            output.innerText = currentInput;
+        }
+    }
+
+    function calculate(first, second, operator) {
+        switch (operator) {
+            case "+":
+                return first + second;
+            case "-":
+                return first - second;
+            case "*":
+                return first * second;
+            case "/":
+                return first / second;
+            default:
+                return 0;
+        }
+    }
+</script> 
+</body>
+
+</html>

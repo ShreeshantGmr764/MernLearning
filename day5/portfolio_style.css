@@ -1,0 +1,93 @@
+
+  
+body{
+  background: linear-gradient(100deg,violet,black);
+  background-repeat: no-repeat; 
+}
+.nav_bar{
+  height:120px;
+  width:90%;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.logo button{
+  mix-blend-mode:multiply;
+  border: none;
+}
+.logo button img{
+  height:60px;
+  width:60px;
+  mix-blend-mode:multiply;
+}
+.hire_me{
+  height:49px;
+  width:135px;
+  background: linear-gradient(135deg,rgb(255, 58, 150, 0.644),rgba(245, 99, 184));
+  border-radius: 50px;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-family:"Sora";
+}
+.content{
+  display: flex;
+  width:1140px;
+  height: 475px;
+  margin: 20px;
+  padding:10px; 
+  justify-content: space-around;
+}
+.name{
+  width: 546px;
+  height: 54px;
+}
+span{
+  font-size: 36px;
+  font-family: "Sora";
+  color: #DDDDDD;
+  text-align: start;
+}
+.heading_tag{
+  width: 554px;
+  height: 144px; 
+  color: linear-gradient(135deg,rgb(245, 99, 184),rgba(255, 58, 150, 0.644),);
+}
+.heading_tag h1{
+  font-size: 60px; 
+  margin: 0px 0px 15px;
+  line-height: 72px;
+  text-align: center;
+  font-family: "Sora";
+ 
+}
+.para{
+  width: 546px;
+}
+p{
+  font-size: 20px;
+  color: #DDDDDD;
+}
+.writing{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.icons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.download{
+  border:2px solid #8750F7;
+  border-radius:50px;
+  width:10vw;
+  height:5vh;
+  padding: 10px;
+  font-family: "Sora";
+  color:#8750F7;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 12 </title>
+  <style>
+    .box {
+      background-color: burlywood;
+      height: 150px;
+      width: 150px;
+      display: hidden;
+    }
+
+    .box:hover {
+      background-color: red;
+      height: 500px;
+      width: 500px;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    .box:active {
+      background-color: black;
+      height: 400px;
+      width: 400px;
+      opacity: 0.3;
+    }
+
+    .parent {
+      border: 2px solid black;
+      position: relative;
+      background-color: blueviolet;
+      height: 500px;
+      width: 500px;
+    }
+
+    .parent:hover {
+      background-color: chartreuse;
+      transition: all 5sec;
+      transition-duration: 3s;
+      transition-delay: 1s;
+      transition-timing-function: (cubic-bezier(1, 0.03, 0, 1.1));
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      border: 2px solid blue;
+
+    }
+
+    /* .parent:active {} */
+
+    .box1 {
+      background-color: red;
+      height: 150px;
+      width: 150px;
+      top: 3rem;
+      z-index: 90;
+    }
+
+    .box1:hover {
+      display: none;
+    }
+
+    .box2:hover {
+      display: none;
+    }
+
+    .box2 {
+      background-color: blue;
+      height: 150px;
+      width: 150px;
+      z-index: 10;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>
+    Hover
+  </h2>
+
+  <div class="box"></div>
+  <h2>z index</h2>
+  <div class="parent">
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+  </div>
+</body>
+</html>
