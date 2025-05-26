@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        #btn {
+            height: 3rem;
+            width: 3rem;
+            background-color: #1e3a8a;
+            color: white;
+            border-radius: 9999px;
+            border-width: 2px;
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            cursor: pointer;
+        }
+
+        #heading {
+            text-align: center;
+        }
+
+        .lorem-section {
+            padding: 1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+    <title>JS DOM</title>
+</head>
+<body>
+
+    <h2 id="heading">Types of DOM</h2>
+
+    <ul>
+        <li>
+            Changes that can be made from DOM are: syntax (id.thingToBeChanged = "") <br>
+            Example: head.style.background = "red"
+        </li>
+        <li>innerText</li>
+        <li>innerHTML</li>
+        <li>Style</li>
+    </ul>
+        
+    <ul>
+        <li class="courses">MERN STACK</li>
+        <li class="courses">UI/UX</li>
+        <li class="courses">Devops</li>
+        <li class="courses">Web Design</li>
+    </ul>
+
+    <ul>
+    <li>Document.getElementById</li>
+    <li>Document.getElementsByClassName</li>
+    <li>Document.querySelector</li>
+    <li>document.querySelector</li>
+    <li>
+        <strong>Note about addEventListener:</strong> 
+        It attaches an event handler to an element, like a button, so when you click it, some code runs. 
+        For example, clicking the scroll button smoothly scrolls the page to the top.
+    </li>
+</ul>
+
+    <!-- Add lots of lorem to make page scrollable -->
+    <div class="lorem-section">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, nisl a pretium finibus, ligula nisl commodo nulla, vel vulputate ex sem eget purus.
+            Morbi ut lorem vel sem pharetra tincidunt. Proin id neque feugiat, convallis orci nec, laoreet justo. Nullam sagittis sollicitudin luctus. Aenean viverra, lorem ac rutrum luctus,
+            eros leo bibendum lorem, sed ullamcorper sapien purus id sapien. Donec nec dui et sem pharetra egestas. Nullam dignissim, orci eget tincidunt lacinia, purus ex pretium ante,
+            a mattis quam erat a nunc. Suspendisse potenti. Pellentesque sed sem nec magna volutpat dapibus.
+        </p>
+        <p>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vulputate purus et risus efficitur, eget tincidunt sapien suscipit.
+            Nulla facilisi. Integer ornare magna ut orci sodales, et sodales nisi varius. Proin eget augue nec tellus malesuada fringilla. Integer efficitur risus vel tellus consequat,
+            a fermentum justo feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+        <p>
+            <!-- Duplicate multiple times -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+        </p>
+    </div>
+
+    <button id="btn">↑</button>
+
+    <script>
+        const head = document.getElementById('heading');
+        head.innerHTML = "<h1>Changed to h1 from h2</h1>";
+        head.style.background = "red";
+        head.style.color = "blue";
+        head.style.display = "flex";
+        head.style.justifyContent = "center";
+
+        const courses = document.getElementsByClassName('courses');
+        courses[0].style.color = "brown";
+
+        const scroll = document.getElementById('btn');
+        scroll.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

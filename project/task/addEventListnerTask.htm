@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+    body{
+      background-color: aliceblue;
+      /* color:brown; */
+    }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Sheet for addEventListner</title>
+</head>
+<body>
+   <p> 1.
+✅ Task 1: Button Click
+Goal: Show an alert when a button is clicked.
+</p>
+
+<button id="btn1">Click Me</button> <br>
+🔧 Challenge: Change the button text to "Clicked!" after the alert. <br>
+
+2.Goal: 
+Log the new value in the console when input changes. <br>
+
+<input type="text" id="username" placeholder="Type your name" />
+<br>
+ Task 3: Mouseover Image <br>
+Goal: When you hover over the image, change its src to another image. <br>
+<img id="hoverImg" src="https://plus.unsplash.com/premium_photo-1666672388644-2d99f3feb9f1?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8anBnfGVufDB8fDB8fHww" width="200" /> <br>
+✅ Task 4: Key Press <br>
+Goal: Display which key was pressed in a p element. <br>
+
+<p id="keyOutput">Key Pressed: <span></span></p>
+
+✅ Task 5: Form Submission <br>
+Goal: Prevent the form from submitting and show an alert with the input value.
+<br>
+<form id="myForm">
+  <input type="text" id="formInput" placeholder="Say something..." />
+  <button type="submit">Submit</button>
+</form>
+
+✅ Task 6: Event Delegation <br>
+Goal: Alert the text of the list item clicked (use only one event listener on ul). <br>
+
+
+<ul id="menu">
+  <li>Home</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+<br>
+✅ Task 7: Input Validation & Form Submission <br>
+Goal:
+
+When the user types in an input box, show the current input length live below it. <br>
+
+When the form is submitted, prevent the default submit, and alert the entered value. <br>
+
+
+<form id="formTask7">
+  <input type="text" id="inputTask7" placeholder="Type something..." />
+  <button type="submit">Submit</button>
+</form>
+
+<p id="lengthDisplayTask7">Length: 0</p>
+
+<br>
+✅ Task 8: Toggle Dark Mode
+Goal:
+Create a button that toggles dark mode on the page by adding/removing a CSS class. When dark mode is on, change background and text colors accordingly.
+
+<button id="toggleDarkModeBtn">Toggle Dark Mode</button>
+
+<script>
+  const toggle = document.getElementById('toggleDarkModeBtn');
+
+toggle.addEventListener('click', () => {
+  document.body.style.backgroundColor = "#121212"; // or any other color
+  document.body.style.color = "#f0f0f0";
+  toggle.textContent="Click for Light"
+   // optional: for contrast
+});
+// toggle.addEventListener('click', () => {
+//   document.body.style.backgroundColor = "#f0f0f0"; // or any other color
+//   document.body.style.color = "#121212"; // optional: for contrast
+// });
+
+  
+  // 1
+  const btn=document.getElementById('btn1');
+  console.log(btn)
+  
+  btn.addEventListener('click',()=>{
+    btn.innerText="Clicked!"
+    alert(`Clicked`)
+  })
+  // 2
+  const inputUsername=document.getElementById('username')
+  
+  inputUsername.addEventListener('keydown',(event)=>{
+    console.log(event.target.value)
+  })
+  // 3
+  const inputImage =document.getElementById('hoverImg')
+  console.log(inputImage)
+  
+  inputImage.addEventListener('mouseover',()=>{
+    inputImage.src="https://images.unsplash.com/photo-1648498030239-edd068c4d34d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anBnfGVufDB8fDB8fHww"
+  })
+  
+  inputImage.addEventListener('mouseout',()=>{
+    inputImage.src="https://plus.unsplash.com/premium_photo-1666672388644-2d99f3feb9f1?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8anBnfGVufDB8fDB8fHww"
+  })
+  // 4
+  const keyOutputSpan = document.querySelector('#keyOutput span');
+  
+  document.addEventListener('keydown', (event) => {
+    keyOutputSpan.textContent = event.key;
+});
+// 5
+const myForm = document.getElementById('myForm')
+const formInput = document.getElementById('formInput')
+const submit = document.getElementById('submit')
+
+formInput.addEventListener('keypress',(event)=>{
+  alert(event.key)
+})
+
+myForm.addEventListener('submit',(event)=>{
+  event.preventDefault();
+})
+// 6
+const list = document.getElementById('menu');
+list.addEventListener('click',(event)=>{
+  const clicked= event.target.closest('li');
+  if (clicked){
+    alert(clicked.textContent)
+  }
+})
+// 7
+const form7= document.getElementById('formTask7')
+
+form7.addEventListener('submit',(event)=>{
+event.preventDefault();
+})
+
+const text7= document.getElementById('inputTask7');
+const lengthDisplayTask7= document.getElementById('lengthDisplayTask7')
+
+text7.addEventListener('keypress',(event)=>{
+const a= event.key.length
+lengthDisplayTask7.innerText=`The length is ${a}`  
+alert(text7.value)
+})
+</script>
+
+</body>
+</html>
+
+
+
+

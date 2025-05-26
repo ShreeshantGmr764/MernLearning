@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Online Code Compiler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="flex flex-col md:flex-row justify-evenly items-start p-6 gap-6">
+        <!-- Code Editor Section -->
+        <div class="flex flex-col gap-4">
+            <h2 class="text-lg font-bold">Write your code here</h2>
+
+            <div class="flex flex-col">
+                <label for="inputHtml" class="font-semibold">HTML:</label>
+                <textarea id="inputHtml" placeholder="Write HTML code here" class="h-40 w-64 border border-gray-300 rounded p-2 text-sm">Write your html code here</textarea>
+            </div>
+
+            <div class="flex flex-col">
+                <label for="inputCss" class="font-semibold">CSS:</label>
+                <textarea id="inputCss" placeholder="Write CSS code here" class="h-40 w-64 border border-gray-300 rounded p-2 text-sm">Write your Css code here</textarea>
+            </div>
+
+            <div class="flex flex-col">
+                <label for="inputJs" class="font-semibold">JavaScript:</label>
+                <textarea id="inputJs" placeholder="Write JavaScript code here" class="h-40 w-64 border border-gray-300 rounded p-2 text-sm">Write your JS code here.</textarea>
+            </div>
+
+            <button onclick="compile()" class="bg-blue-600 text-white px-4 py-2 mt-2 rounded hover:bg-blue-700 transition">Run Code</button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="flex-1 w-full md:w-2/3">
+            <h2 class="text-lg font-bold mb-2">Output</h2>
+            <iframe id="output" class="w-full h-[500px] border border-gray-400 rounded bg-white"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function compile() {
+            const html = document.getElementById('inputHtml').value;
+            const css = `<style>${document.getElementById('inputCss').value}</style>`;
+            const js = `<script>${document.getElementById('inputJs').value}<\/script>`;
+            const output = document.getElementById('output');
+            output.srcdoc = html + css + js;
+        }
+    </script>
+</body>
+</html>
